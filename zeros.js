@@ -2,7 +2,6 @@
 
 function solution(N) {
     let binary = Number(N).toString(2);
-    console.log(binary)
     if (binary.includes('0')){
         let binaryArry = binary.split('')
         let result = binaryArry.filter(num => num !== '0')
