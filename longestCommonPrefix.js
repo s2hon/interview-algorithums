@@ -6,7 +6,7 @@ function longestCommonPrefix(strs) {
     else {
         let filter = strs.filter(s => s !== "")
         if (!filter.length) {
-            return 0
+            return result
         }
         else {
         let word = strs.slice(0,1).toString();

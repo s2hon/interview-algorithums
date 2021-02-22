@@ -1,9 +1,23 @@
 function validBraces(braces){
+    let leftIndex = 0;
+    let rightIndex = braces.length-1;
 
-    for (let i=0; i<braces.length; i++) {
-        let neg = ++i
-        if (braces[i] === "{" || "(" || "["){
-            if (braces.length-neg === "}" || ")" || "]") {
+    while (leftIndex < rightIndex) {
+
+        let temp = braces[leftIndex]
+
+        if (braces[i] === "{"){
+            if (braces.length-neg === "}") {
+            }
+            else return false
+        }
+        else if (braces[i] === "("){
+            if (braces.length-neg === ")") {
+            }
+            else return false
+        }
+        else if (braces[i] === "["){
+            if (braces.length-neg === "]") {
             }
             else return false
         }

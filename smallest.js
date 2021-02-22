@@ -1,26 +1,19 @@
 function solution(A) {
-    let B = A.sort((a,b)=>a-b)
-    let lastNum = B[B.length-1]
-    if (lastNum < 0) {
-        return 1
-    }
-    else {
-        let result = [];
-        for (let i=1; i<B.length; i++) {
-            if (B[i] - B[i-1]!==1) {
-                result.push(B[i]-1)
-            }
-        }
-        if (result !== undefined) {
-            result = result.filter(num => num !== 0)
-            return result[0]
-        }
-        else {
-            B.length+1
-        }
+    // only positive values, sorted
+    A = A.filter(x => x >= 1).sort((a, b) => a - b)
 
+    let x = 1
+
+    for(let i = 0; i < A.length; i++) {
+        // if we find a smaller number no need to continue, cause the array is sorted
+        if(x < A[i]) {
+            return x
+        }
+        x = A[i] + 1
     }
 
+    return x
 }
+
 
 console.log(solution([1,2,3]))

@@ -38,8 +38,9 @@ function solution(S) {
 
     for (let i=0; i<givenLower.length; i++) {
         for (let j=0; j<givenUpper.length; j++) {
-            if (givenLower[i] === givenUpper[j]) {
-                givenUpper.push(upperArr.indexOf(upperArr[j]))
+        
+            if (givenLower[i] !== givenUpper[j]) {
+                givenLower.splice(givenLower.indexOf(givenLower[i]),0,givenLower[i])
             }
         }
     }

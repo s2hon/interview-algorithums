@@ -45,8 +45,8 @@ function solution(A, K) {
         A.splice(0,0,replace)
         index = A.length-1
         A.splice(index,1)
-        console.log(A);
     }
+    return A
 }
 
 console.log(solution([3, 8, 9, 7, 6], 3))
