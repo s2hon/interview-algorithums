@@ -1,0 +1,3 @@
+function meanAndChessboard(matrix, queries) {
+    
+}
